@@ -54,8 +54,6 @@
         <param name="onload" value="true" />
     </feature>
 
-    <gap:plugin name="com.urbanairship.phonegap.PushNotificationPlugin"/>
-
     <!-- Urban Airship app credentials -->
     <preference name="com.urbanairship.development_app_key" value="EVnMegNcSXWBYmUh-1x_XQ" />
     <preference name="com.urbanairship.development_app_secret" value="QBXUHYByR2qZQr7XBtesfg" />
