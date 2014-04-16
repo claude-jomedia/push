@@ -49,23 +49,5 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="http://127.0.0.1*" />
 
-    <gap:plugin name="com.phonegap.plugins.pushplugin"/>
-
-    <feature name="PushNotificationPlugin">
-        <param name="android-package" value="com.urbanairship.phonegap.PushNotificationPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-
-    <!-- Urban Airship app credentials -->
-    <preference name="com.urbanairship.development_app_key" value="EVnMegNcSXWBYmUh-1x_XQ" />
-    <preference name="com.urbanairship.development_app_secret" value="QBXUHYByR2qZQr7XBtesfg" />
-
-    <!-- If the app is in production or not -->
-    <preference name="com.urbanairship.in_production" value="false" />
-
-    <!-- Enable push when the application launches (instead of waiting for enablePush js call).  Defaults to false -->
-    <preference name="com.urbanairship.enable_push_onlaunch" value="true" />
-
-    <!-- Only required for Android. -->
-    <preference name="com.urbanairship.gcm_sender" value="ad-center-001" />
+    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
 </widget>
