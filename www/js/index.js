@@ -51,7 +51,7 @@ var pushNotification;
 
 pushNotification = window.plugins.pushNotification;
 
-pushNotification.registerDevice({ alert:true, badge:true, sound:true,  projectid: "ad-center-001", appid : "AC72D-46994" },
+pushNotification.registerDevice({ alert:true, badge:true, sound:true,  projectid: "534936591177", appid : "AC72D-46994" },
                                     function(status) {
                                         var pushToken = status;
                                         console.log( 'push token: ' + JSON.stringify(pushToken) );
