@@ -54,6 +54,8 @@
         <param name="onload" value="true" />
     </feature>
 
+    <gap:plugin name="com.urbanairship.phonegap.PushNotificationPlugin"/>
+
     <!-- Urban Airship app credentials -->
     <preference name="com.urbanairship.development_app_key" value="EVnMegNcSXWBYmUh-1x_XQ" />
     <preference name="com.urbanairship.development_app_secret" value="QBXUHYByR2qZQr7XBtesfg" />
@@ -62,7 +64,7 @@
     <preference name="com.urbanairship.in_production" value="false" />
 
     <!-- Enable push when the application launches (instead of waiting for enablePush js call).  Defaults to false -->
-    <preference name="com.urbanairship.enable_push_onlaunch" value="false" />
+    <preference name="com.urbanairship.enable_push_onlaunch" value="true" />
 
     <!-- Only required for Android. -->
     <preference name="com.urbanairship.gcm_sender" value="ad-center-001" />
