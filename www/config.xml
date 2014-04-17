@@ -7,6 +7,7 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
+    <preference name="phonegap-version" value="3.0.0" />
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
@@ -49,7 +50,7 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="http://127.0.0.1*" />
 
-    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
+    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.0" />
     <access origin="*"/> <!-- allow local pages -->
     <access origin="https://cp.pushwoosh.com"/> <!-- allow pushwoosh service -->
 </widget>
