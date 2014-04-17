@@ -45,24 +45,5 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-
-
-var pushNotification;
-
-pushNotification = window.plugins.pushNotification;
-
-pushNotification.registerDevice({ alert:true, badge:true, sound:true,  projectid: "534936591177", appid : "AC72D-46994" },
-                                    function(status) {
-                                        var pushToken = status;
-                                        console.log( 'push token: ' + JSON.stringify(pushToken) );
-                                        console.log( 'push token: ' + pushToken ) );
-                                    },
-                                    function(status) {
-                                        console.log( 'fail ' + JSON.stringify(['failed to register', status]) );
-                                        console.log( 'fail ' +  status ) );
-                                    });
-
-
-
     }
 };
