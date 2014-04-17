@@ -58,16 +58,16 @@ var app = {
             }
         );
      
-        document.addEventListener('push-notification', function(event) {
-            var title = event.notification.title;
-                var userData = event.notification.userdata;
-                                     
-                if(typeof(userData) != "undefined") {
-                console.warn('user data: ' + JSON.stringify(userData));
-            }
-                                         
-            navigator.notification.alert(title);
-        });
+    //     document.addEventListener('push-notification', function(event) {
+    //         var title = event.notification.title;
+    //             var userData = event.notification.userdata;
+    //                                  
+    //             if(typeof(userData) != "undefined") {
+    //             console.warn('user data: ' + JSON.stringify(userData));
+    //         }
+    //                                      
+    //         navigator.notification.alert(title);
+    //     });
 
     }
 };
