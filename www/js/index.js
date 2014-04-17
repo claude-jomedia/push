@@ -55,15 +55,11 @@ pushNotification.registerDevice({ alert:true, badge:true, sound:true,  projectid
                                     function(status) {
                                         var pushToken = status;
                                         console.log( 'push token: ' + JSON.stringify(pushToken) );
-                                        console.log( 'push token: ' + pushToken );
-                                        // showStatusMsg('push token: ' + JSON.stringify(pushToken)
-                                            );
+                                        console.log( 'push token: ' + pushToken ) );
                                     },
                                     function(status) {
                                         console.log( 'fail ' + JSON.stringify(['failed to register', status]) );
-                                        console.log( 'fail ' +  status );
-                                        // showStatusMsg(JSON.stringify(['failed to register', status])
-                                            );
+                                        console.log( 'fail ' +  status ) );
                                     });
 
 
