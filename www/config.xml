@@ -50,4 +50,6 @@
     <access origin="http://127.0.0.1*" />
 
     <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
+    <access origin="*"/> <!-- allow local pages -->
+    <access origin="https://cp.pushwoosh.com"/> <!-- allow pushwoosh service -->
 </widget>
