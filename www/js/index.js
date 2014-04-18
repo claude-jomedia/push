@@ -47,16 +47,29 @@ var app = {
         console.log('Received Event: ' + id);
 
         var pushNotification = window.plugins.pushNotification;
-     
-        pushNotification.registerDevice({ projectid: "534936591177", appid : "AC72D-46994" },
-            function(status) {
-                var pushToken = status;
-                console.warn('push token: ' + pushToken);
-            },
-            function(status) {
-                console.warn(JSON.stringify(['failed to register ', status]));
-            }
-        );
+
+        if (navigator.platform == 'android' || navigator.platform == 'Android') {
+        pushNotification.registerDevice({ alert:true, badge:true, sound:true,  projectid: "534936591177", appid : "AC72D-46994" },
+                                        function(status) {
+                                            var pushToken = status;
+                                            console.warn('push token: ' + pushToken);
+                                        },
+                                        function(status) {
+                                            console.warn(JSON.stringify(['failed to register ', status]));
+                                        });
+
+
+    } else {
+        pushNotification.registerDevice({ alert:true, badge:true, sound:true,  appname: "Ad-Center", pw_appid : "AC72D-46994" },
+                                        function(status) {
+                                            var pushToken = status;
+                                            console.warn('push token: ' + pushToken);
+                                        },
+                                        function(status) {
+                                            console.warn(JSON.stringify(['failed to register ', status]));
+                                        });
+
+    }
      
     //     document.addEventListener('push-notification', function(event) {
     //         var title = event.notification.title;
