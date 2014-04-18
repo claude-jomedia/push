@@ -49,10 +49,12 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
 
         if (navigator.platform == 'android' || navigator.platform == 'Android') {
+            console.log('android');
         pushNotification.registerDevice({ alert:true, badge:true, sound:true,  projectid: "534936591177", appid : "AC72D-46994" },
                                         function(status) {
                                             var pushToken = status;
                                             console.warn('push token: ' + pushToken);
+                                            console.log(pushToken);
                                         },
                                         function(status) {
                                             console.warn(JSON.stringify(['failed to register ', status]));
@@ -60,10 +62,12 @@ var app = {
 
 
     } else {
+        console.log('iphone');
         pushNotification.registerDevice({ alert:true, badge:true, sound:true,  appname: "Ad-Center", pw_appid : "AC72D-46994" },
                                         function(status) {
                                             var pushToken = status;
                                             console.warn('push token: ' + pushToken);
+                                            console.log(pushToken);
                                         },
                                         function(status) {
                                             console.warn(JSON.stringify(['failed to register ', status]));
