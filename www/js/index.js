@@ -46,6 +46,8 @@ var app = {
 
         console.log('Received Event: ' + id);
 
+        console.warn('test');
+
         var pushNotification = window.plugins.pushNotification;
 
         if (navigator.platform == 'android' || navigator.platform == 'Android') {
