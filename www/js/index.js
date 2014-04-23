@@ -44,35 +44,37 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        // console.log('Received Event: ' + id);
 
         console.warn('test');
 
         var pushNotification = window.plugins.pushNotification;
 
         if (navigator.platform == 'android' || navigator.platform == 'Android') {
+        console.warn('android');
         pushNotification.registerDevice({ alert:true, badge:true, sound:true,  projectid: "534936591177", appid : "AC72D-46994" },
                                         function(status) {
                                             var pushToken = status;
                                             console.warn('push token android: ' + pushToken);
-                                            console.log(pushToken);
+                                            // console.log(pushToken);
                                         },
                                         function(status) {
-                                            console.log('android');
+                                            // console.log('android');
                                             console.warn(JSON.stringify(['failed to register ', status]));
                                         });
 
 
     } else {
+        console.warn('not android');
         pushNotification.registerDevice({ alert:true, badge:true, sound:true,  appname: "Ad-Center", pw_appid : "AC72D-46994" },
                                         function(status) {
                                             var pushToken = status;
                                             console.warn('push token ios: ' + pushToken);
-                                            console.log(pushToken);
-                                            console.log(pushToken.deviceToken);
+                                            // console.log(pushToken);
+                                            // console.log(pushToken.deviceToken);
                                         },
                                         function(status) {
-                                            console.log('iphone');
+                                            // console.log('iphone');
                                             console.warn(JSON.stringify(['failed to register ', status]));
                                         });
 
