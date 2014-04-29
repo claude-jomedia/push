@@ -43,15 +43,15 @@
 
             function onMenuKeyDown() {
                 console.log('menu press');
-                if ( $('.menu-open').length == 0 ) {
-                    $( "#menu" ).show();
-                    $( "#menu" ).addClass( "menu-open" );
-                    console.log('add');
-                }
-                else{
+                if ( $('.menu-open').length != 0 ) {
                     $( "#menu" ).hide();
                     $( "#menu" ).removeClass( "menu-open" );
                     console.log('remove');
+                }
+                else{
+                    $( "#menu" ).show();
+                    $( "#menu" ).addClass( "menu-open" );
+                    console.log('add');
                 }
             }
 
