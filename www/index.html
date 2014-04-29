@@ -33,14 +33,24 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
+        <div id="menu">Sign out</div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="PushNotification.js"></script>
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
         <!-- <script type="text/javascript" src="js/index.js"></script> -->
         <script type="text/javascript">
             // app.initialize();
 
             function onMenuKeyDown() {
                 console.log('menu press');
+                if ( $('.menu-open').length == 0 ) {
+                    $( "#menu" ).addClass( "menu-open" );
+                    $( "#menu" ).show();
+                }
+                else{
+                    $( "#menu" ).removeClass( "menu-open" );
+                    $( "#menu" ).hide();
+                }
             }
 
             // Wait for PhoneGap to load
