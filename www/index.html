@@ -44,12 +44,14 @@
             function onMenuKeyDown() {
                 console.log('menu press');
                 if ( $('.menu-open').length == 0 ) {
-                    $( "#menu" ).addClass( "menu-open" );
                     $( "#menu" ).show();
+                    $( "#menu" ).addClass( "menu-open" );
+                    console.log('add');
                 }
                 else{
-                    $( "#menu" ).removeClass( "menu-open" );
                     $( "#menu" ).hide();
+                    $( "#menu" ).removeClass( "menu-open" );
+                    console.log('remove');
                 }
             }
 
