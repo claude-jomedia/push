@@ -35,9 +35,21 @@
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="PushNotification.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <!-- <script type="text/javascript" src="js/index.js"></script> -->
         <script type="text/javascript">
-            app.initialize();
+            // app.initialize();
+
+            function onMenuKeyDown() {
+                console.log('menu press');
+            }
+
+            // Wait for PhoneGap to load
+            // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+            function onDeviceReady() {
+                document.addEventListener("menubutton", onMenuKeyDown, false);
+            }
+
+            document.addEventListener("deviceready", onDeviceReady, false);
         </script>
     </body>
 </html>
