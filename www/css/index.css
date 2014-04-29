@@ -117,10 +117,10 @@ h1 {
 #menu {
     display: none;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 2%;
+    right: 2%;
     width: 35%;
-    height: 3em;
-    font-size: 2em;
+    height: 7em;
+    font-size: 5em;
     border: 1px solid black;
 }
